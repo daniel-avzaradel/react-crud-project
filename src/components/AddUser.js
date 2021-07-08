@@ -5,7 +5,8 @@ import {
     Label,
     Input,
     Button
-} from 'reactstrap'
+} from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 function AddUser() {
     return (
@@ -15,6 +16,7 @@ function AddUser() {
                 <Input type='text' placeholder='Enter Name'></Input>
             </FormGroup>
             <Button type='submit'>Submit</Button>
+            <Link to='/' className='btn btn-danger ml-2'>Cancel</Link>
         </Form>
     )
 }
