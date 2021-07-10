@@ -11,7 +11,6 @@ function App() {
   return (
     <div style={{ maxWidth: '30rem', margin: '4rem auto'}}>
       <Router>
-        <h1>Nav</h1>
         <Switch>
         <Route exact path='/' component={Home}/>
         <Route path='/add' component={AddUser}/>

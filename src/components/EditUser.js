@@ -15,7 +15,7 @@ function EditUser() {
                 <Label>Name</Label>
                 <Input type='text' placeholder='Enter Name'></Input>
             </FormGroup>
-            <Button type='submit'>Edit Name</Button>
+            <Button type='submit' className='edituser-btn'>Edit Name</Button>
             <Link to='/' className='btn btn-danger ml-2'>Cancel</Link>
         </Form>
     )

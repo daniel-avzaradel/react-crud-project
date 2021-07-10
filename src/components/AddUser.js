@@ -15,7 +15,7 @@ function AddUser() {
                 <Label>Name</Label>
                 <Input type='text' placeholder='Enter Name'></Input>
             </FormGroup>
-            <Button type='submit'>Submit</Button>
+            <Button type='submit' className='adduser-btn'>Submit</Button>
             <Link to='/' className='btn btn-danger ml-2'>Cancel</Link>
         </Form>
     )
