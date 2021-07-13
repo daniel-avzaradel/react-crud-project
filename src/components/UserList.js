@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {GlobalContext} from '../context/GlobalState'
 import { Link } from 'react-router-dom';
 import {
     ListGroup,
@@ -7,22 +8,21 @@ import {
 } from 'reactstrap'
 
 function UserList() {
+    const {users, removeUser} = useContext(GlobalContext)
+
     return (
         <ListGroup className="mt-4">
-            <ListGroupItem className="d-flex">
-                <strong>User One</strong>
+        {users.map((user, i) => {
+           return(
+            <ListGroupItem className="d-flex" key={i}>
+                <strong>{user.name}</strong>
                 <div className="ml-auto">
-                    <Link className="btn btn-warning" to='/edit/1'>Edit</Link>
-                    <Button color='danger' style={{marginLeft: '10px'}}>Delete</Button>
+                    <Link className="btn btn-warning" to={`/edit/${user.id}`}>Edit</Link>
+                    <Button onClick={() => removeUser(user.id)} color='danger' style={{marginLeft: '10px'}}>Delete</Button>
                 </div>
             </ListGroupItem>
-            <ListGroupItem className="d-flex">
-                <strong>User Two</strong>
-                <div className="ml-auto">
-                    <Link className="btn btn-warning" to='/edit/2'>Edit</Link>
-                    <Button color='danger' style={{marginLeft: '10px'}}>Delete</Button>
-                </div>
-            </ListGroupItem>
+           )
+        })}
         </ListGroup>
     )
 }
