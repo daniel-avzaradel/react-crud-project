@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/Home';
 import AddUser from './components/AddUser';
 import EditUser from './components/EditUser';
+import GlobalProvider from './context/GlobalState'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
