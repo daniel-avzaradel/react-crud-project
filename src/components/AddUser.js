@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import {GlobalContext} from '../context/GlobalState';
 import {
     Form,
     FormGroup,
@@ -9,8 +10,14 @@ import {
 import { Link } from 'react-router-dom'
 
 function AddUser() {
+
+    const {addUser} = useContext(GlobalContext)
+    const onSubmit = () => {
+        
+    }
+
     return (
-        <Form>
+        <Form onSubmit={onSubmit}>
             <FormGroup>
                 <Label>Name</Label>
                 <Input type='text' placeholder='Enter Name'></Input>
