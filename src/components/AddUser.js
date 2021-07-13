@@ -7,6 +7,7 @@ import {
     Input,
     Button
 } from 'reactstrap';
+import { v4 as uuid } from 'uuid';
 import { Link, useHistory } from 'react-router-dom'
 
 function AddUser() {
@@ -16,8 +17,8 @@ function AddUser() {
 
     const onSubmit = () => {
         const newUser = {
-            id: 4,
-            name: name
+            id: uuid(),
+            name
         }
         addUser(newUser);
         history.push('/')
